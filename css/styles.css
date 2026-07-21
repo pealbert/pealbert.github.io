@@ -89,7 +89,7 @@ header nav {
 header ul {
 	list-style: none;
 	display: flex;
-	gap: 2.5rem;
+	gap: 2rem;
 }
 
 header li a {
@@ -182,11 +182,11 @@ footer {
 
 @media (min-width: 1280px) {
 	header nav ul {
-		gap: 7rem;
+		gap: 5rem;
 	}
 }
 
-@media (hover: hover) {
+@media (hover: hover) and (pointer: fine) {
 	#sidebar:hover {
 		background-color: var(--bright-gray-color);
 	}
