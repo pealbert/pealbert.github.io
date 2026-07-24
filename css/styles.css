@@ -55,6 +55,10 @@ h1 {
 	font-size: var(--medium-font-size);
 }
 
+ul {
+	padding-left: 0;
+}
+
 #wrapper {
 	display: flex;
 	flex-direction: column;
@@ -92,7 +96,6 @@ header ul {
 	list-style: none;
 	display: flex;
 	gap: 2rem;
-	padding-left: 0;
 }
 
 header li a {
@@ -137,6 +140,10 @@ header .burger svg {
 	height: 60vh;
 }
 
+#hero h1 {
+	color: var(--black-color);
+}
+
 .hero__title {
 	display: flex;
 	flex-direction: column;
@@ -164,12 +171,14 @@ header .burger svg {
 
 #hero svg:first-child {
 	display: none;
+	color: var(--black-color);
 }
 
 #hero svg:last-child {
 	width: 80px;
 	min-width: 80px;
 	margin-right: var(--tiny-font-size);
+	color: var(--black-color);
 }
 
 #about {
@@ -203,6 +212,40 @@ header .burger svg {
 	width: 40px;
 	color: var(--white-color);
 	order: 2;
+}
+
+#why-us {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+#why-us h1 {
+	color: var(--black-color);
+	margin-top: 1rem;
+}
+
+.why-us__list {
+	display: grid;
+	grid-template-columns: 1fr;
+	list-style: none;
+}
+
+.why-us__item {
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+}
+
+.why-us__item p {
+	color: var(--black-color);
+}
+
+.why-us__item svg {
+	width: 20px;
+	min-width: 20px;
+	color: var(--red-color);
 }
 
 #benefits {
@@ -301,6 +344,18 @@ footer h1 {
 	.about__info svg {
 		width: 50px;
 	}
+
+	#why-us {
+		gap: 3rem;
+	}
+
+	.why-us__list {
+		grid-template-columns: 1fr 1fr;
+	}
+
+	.why-us__item {
+		margin: 0 1rem;
+	}
 }
 
 @media (min-width: 1024px) {
@@ -345,6 +400,10 @@ footer h1 {
 
 	.about__info {
 		gap: 6rem;
+	}
+
+	.why-us__item {
+		margin: 0 5rem;
 	}
 }
 
