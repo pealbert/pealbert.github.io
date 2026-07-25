@@ -201,6 +201,11 @@ header .burger svg {
 	color: var(--white-color);
 }
 
+#about h1::selection {
+	background-color: var(--white-color);
+	color: var(--red-color);
+}
+
 .about__info {
 	display: flex;
 	flex-direction: column;
@@ -214,6 +219,11 @@ header .burger svg {
 	color: var(--white-color);
 	font-size: var(--tiny-font-size);
 	text-align: center;
+}
+
+.about__info p::selection {
+	background-color: var(--white-color);
+	color: var(--red-color);
 }
 
 .about__info svg {

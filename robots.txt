@@ -3,4 +3,4 @@ Allow: /
 Disallow: /admin.html
 Disallow: /admin
 
-Sitemap: https://example.com/sitemap.xml
+Sitemap: https://pealbert.github.io/sitemap.xml
