@@ -1,5 +1,10 @@
 .env
-node_modules
+.env.local
+node_modules/
+dist/
+build/
 biome.json
 package-lock.json
 package.json
+.vscode/
+*.tmp

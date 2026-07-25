@@ -1,1 +1,1 @@
-# pealbert.github.io
+# Akademie Taekwon-do SKUP Olomouc
