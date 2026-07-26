@@ -379,6 +379,76 @@ header .burger svg {
 	margin: 1rem 2rem 2rem 0;
 }
 
+#faq {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 3rem;
+}
+
+#faq h1 {
+	color: var(--black-color);
+}
+
+.faq__questions {
+	width: 285px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: flex-start;
+}
+
+.faq__questions details {
+	outline: none;
+	display: flex;
+	flex-direction: column;
+	cursor: pointer;
+}
+
+.faq__questions details[open] svg {
+	transform: rotate(45deg);
+}
+
+.faq__questions summary {
+	display: flex;
+	gap: 1rem;
+	list-style: none;
+	-webkit-user-select: none;
+	user-select: none;
+}
+
+.faq__questions summary::-webkit-details-marker {
+	display: none;
+}
+
+.faq__questions summary p {
+	color: var(--black-color);
+	font-size: var(--tiny-font-size);
+	font-weight: 500;
+}
+
+.faq__questions summary svg {
+	color: var(--red-color);
+	width: 20px;
+	min-width: 20px;
+}
+
+.faq__questions details > p {
+	margin-top: -0.25rem;
+	font-size: var(--tiny-font-size);
+	color: var(--black-color);
+}
+
+.faq__questions hr {
+	border: none;
+	flex-shrink: 0;
+	background-color: var(--bright-gray-color);
+	min-height: 2px;
+	height: 2px;
+	width: 100%;
+}
+
 footer {
 	display: flex;
 	width: 100%;
@@ -493,6 +563,25 @@ footer h1 {
 		flex-direction: row;
 		gap: 4rem;
 	}
+
+	.faq__questions {
+		width: 345px;
+		gap: 0.5rem;
+	}
+
+	.faq__questions summary svg {
+		width: 25px;
+		min-width: 25px;
+	}
+
+	.faq__questions summary p {
+		font-size: var(--small-font-size);
+	}
+
+	.faq__questions details > p {
+		margin-top: 0;
+		font-size: var(--small-font-size);
+	}
 }
 
 @media (min-width: 1024px) {
@@ -572,6 +661,10 @@ footer h1 {
 	.testimonial quote {
 		max-width: 330px;
 		font-size: var(--small-font-size);
+	}
+
+	#faq {
+		gap: 5rem;
 	}
 }
 
