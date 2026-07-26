@@ -435,6 +435,7 @@ header .burger svg {
 }
 
 .faq__questions details > p {
+	cursor: text;
 	margin-top: -0.25rem;
 	font-size: var(--tiny-font-size);
 	color: var(--black-color);
@@ -447,6 +448,35 @@ header .burger svg {
 	min-height: 2px;
 	height: 2px;
 	width: 100%;
+}
+
+#call-to-action {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 0.5rem;
+	padding: 0 0 5rem 0;
+}
+
+#call-to-action h2 {
+	color: var(--black-color);
+	font-size: var(--medium-font-size);
+	font-family: 'Cal Sans', sans-serif;
+}
+
+#call-to-action h1 {
+	color: var(--red-color);
+	font-size: var(--huge-font-size);
+}
+
+#call-to-action a {
+	text-decoration: none;
+	color: var(--black-color);
+	font-family: 'Cal Sans', sans-serif;
+	padding: 0.5rem 1.5rem;
+	border: var(--black-color) solid 3px;
+	border-radius: var(--round-border-radius);
+	margin-top: 1rem;
 }
 
 footer {
@@ -582,6 +612,14 @@ footer h1 {
 		margin-top: 0;
 		font-size: var(--small-font-size);
 	}
+
+	#call-to-action h2 {
+		font-size: var(--large-font-size);
+	}
+
+	#call-to-action h1 {
+		font-size: var(--extra-huge-font-size);
+	}
 }
 
 @media (min-width: 1024px) {
@@ -665,6 +703,24 @@ footer h1 {
 
 	#faq {
 		gap: 5rem;
+	}
+
+	#call-to-action {
+		gap: 1rem;
+	}
+
+	#call-to-action h2 {
+		font-size: var(--huge-font-size);
+	}
+
+	#call-to-action h1 {
+		font-size: var(--enormous-font-size);
+	}
+
+	#call-to-action a {
+		font-size: var(--medium-font-size);
+		padding: 0.75rem 2rem;
+		border: var(--black-color) solid 3.5px;
 	}
 }
 
