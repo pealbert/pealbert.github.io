@@ -455,7 +455,7 @@ header .burger svg {
 	flex-direction: column;
 	align-items: center;
 	gap: 0.5rem;
-	padding: 0 0 5rem 0;
+	padding: 0 0 10rem 0;
 }
 
 #call-to-action h2 {
@@ -480,19 +480,88 @@ header .burger svg {
 }
 
 footer {
-	display: flex;
 	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
 	background-color: var(--black-color);
-	justify-content: center;
-	align-items: center;
-	padding: var(--huge-font-size) 0;
+	padding: 2rem 0;
+	gap: 1rem
 }
 
-footer h1 {
-	color: var(--white-color);
-	font-family: "Cal Sans", sans-serif;
-	font-size: var(--enormous-font-size);
+footer .info {
+	display: grid;
+	gap: 2rem;
+	grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+	width: min(1200px, 100%);
+	margin: 0 auto;
+	padding: 0 2rem;
+	box-sizing: border-box;
+}
 
+footer .impressum, 
+footer .contact,
+footer .web,
+footer .documents,
+footer .community {
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+	font-weight: 300;
+	color: var(--bright-gray-color);
+}
+
+footer .impressum,
+footer .contact {
+	grid-column: span 2;
+}
+
+footer .impressum > *:first-child,
+footer .contact > *:first-child,
+footer .web > *:first-child,
+footer .documents > *:first-child,
+footer .community > *:first-child {
+	font-weight: 600;
+	color: var(--white-color);
+}
+
+.community__media {
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+}
+
+.community__media svg {
+	color: var(--bright-gray-color);
+	width: 17px;
+	min-width: 17px;
+}
+
+footer > a {
+	text-decoration: none;
+	font-family: 'Cal Sans', sans-serif;
+	color: var(--white-color);
+	cursor: pointer;
+	text-align: center;
+	font-size: 13cqw;
+	-webkit-user-select: none;
+	user-select: none;
+	margin: 0 auto;
+}
+
+footer > p {
+	font-weight: 300;
+	max-width: calc(100% - 2rem);
+	text-align: center;
+	margin: 0 auto;
+	color: var(--bright-gray-color);
+}
+
+@media (min-width: 428px) {
+	footer .contact {
+		grid-column: 1 2;
+		grid-row: 2;
+	}
 }
 
 @media (min-width: 480px) {
@@ -521,6 +590,10 @@ footer h1 {
 		width: 40px;
 		min-width: 40px;
 	}
+}
+
+@media (min-width: 636px) {
+	
 }
 
 @media (min-width: 768px) {
