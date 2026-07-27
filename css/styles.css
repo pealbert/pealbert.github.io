@@ -89,6 +89,7 @@ header {
 	width: 100%;
 	background-color: var(--poor-white-color);
 	padding: var(--small-font-size) 0;
+	transition: padding 0.2s ease;
 }
 
 header .logo {
@@ -109,7 +110,6 @@ header .logo svg {
 	display: none;
 	width: 35px;
 	min-width: 35px;
-	overflow: visible;
 }
 
 header nav {
@@ -173,6 +173,7 @@ header > a:nth-last-of-type(1)::after {
 }
 
 header .burger {
+	border: none;
 	cursor: pointer;
 	display: flex;
 	align-items: center;
@@ -186,7 +187,44 @@ header .burger {
 header .burger svg {
 	color: var(--white-color);
 	width: var(--small-font-size);
+	overflow: visible;
 }
+
+header .burger svg rect {
+	transition: all 0.2s ease;
+}
+
+header .burger.is-active rect:nth-child(2) {
+	opacity: 0;
+}
+
+header .burger.is-active rect:nth-child(1) {
+	transform: rotate(45deg) translate(2px, -2px);
+}
+
+header .burger.is-active rect:nth-child(3) {
+	transform: rotate(-45deg) translate(-5px, -1px);
+}
+
+header.header__expanded {
+	flex-wrap: wrap;
+	padding-bottom: calc(var(--small-font-size) + 0.5rem);
+	border-radius: 0 0 25px 25px;
+}
+
+header.header__expanded nav {
+	display: block;
+	width: 100%;
+	order: 3;
+	padding-top: 2rem;
+}
+
+header.header__expanded ul {
+	flex-direction: column;
+	align-items: center;
+	gap: 2rem;
+}
+
 
 #hero {
 	display: flex;
@@ -671,14 +709,48 @@ footer .community > *:first-child {
 }
 
 footer > a {
+	position: relative;
+	text-transform: uppercase;
 	font-family: 'Cal Sans', sans-serif;
-	color: var(--white-color);
+	color: var(--black-color);
 	text-align: center;
 	font-size: 13cqw;
 	-webkit-user-select: none;
 	user-select: none;
 	margin: 0 auto;
+	overflow: hidden;
 }
+
+footer > a::before {
+	content: "Taekwon-do";
+	position: absolute;
+	top: 0;
+	left: 50%;
+	transform: translateX(-50%);
+	white-space: nowrap;
+	color: var(--white-color);
+	transition: all 0.3s ease;
+}
+
+footer > a::after {
+	content: "Zpět nahoru";
+	position: absolute;
+	bottom: calc(-100% - 1px);
+	left: 50%;
+	transform: translateX(-50%);
+	white-space: nowrap;
+	color: var(--white-color);
+	transition: all 0.3s ease;
+}
+
+footer > a:hover::before {
+	top: -100%;
+}
+
+footer > a:hover::after {
+	bottom: 0;
+}
+
 
 footer > p {
 	font-weight: 300;
