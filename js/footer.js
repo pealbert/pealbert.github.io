@@ -1,4 +1,4 @@
-document.querySelector("header > a").addEventListener('click', (e) => {
+document.querySelector("footer > a").addEventListener('click', (e) => {
 	e.preventDefault();
 
 	window.scrollTo({
@@ -6,4 +6,3 @@ document.querySelector("header > a").addEventListener('click', (e) => {
 		behavior: 'smooth'
 	});
 });
-
