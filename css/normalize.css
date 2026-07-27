@@ -43,6 +43,7 @@ pre {
 }
 
 a {
+	cursor: pointer;
 	text-decoration: none;
 	color: inherit;
 	background-color: transparent;
