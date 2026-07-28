@@ -13,7 +13,7 @@ main {
 }
 
 main svg {
-	width: clamp(75px, 12cqw, 125px);
+	width: clamp(75px, 12cqw, 100px);
 	color: var(--red-color);
 }
 

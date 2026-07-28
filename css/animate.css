@@ -37,9 +37,13 @@
 		transform: scale(3.6);
 	}
 
-	footer .web:hover:not(:active),
-	footer .documents:hover:not(:active),
-	footer .community:hover:not(:active) {
+	footer .web a:hover:not(:active),
+	footer .documents a:hover:not(:active),
+	footer .community a:hover:not(:active) {
+		color: var(--white-color);
+	}
+
+	footer .community a:hover:not(:active) svg {
 		color: var(--white-color);
 	}
 

@@ -33,7 +33,6 @@ footer .community {
 	gap: 1rem;
 	font-weight: 300;
 	color: var(--bright-gray-color);
-	transition: all 0.2s ease;
 }
 
 footer .impressum > *:first-child,
@@ -55,6 +54,7 @@ footer .community > *:first-child {
 	color: var(--bright-gray-color);
 	width: 17px;
 	min-width: 17px;
+	overflow: visible;
 }
 
 footer > a {
@@ -97,6 +97,7 @@ footer > p {
 	max-width: calc(100% - 2rem);
 	text-align: center;
 	margin: 0 auto;
+	max-width: calc(100% - 4rem);
 	color: var(--bright-gray-color);
 }
 
