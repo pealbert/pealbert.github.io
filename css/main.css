@@ -284,77 +284,16 @@
 	color: var(--black-color);
 }
 
-.faq__questions {
+.disclosures {
 	width: 285px;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: flex-start;
-}
-
-.faq__questions details {
-	outline: none;
-	display: flex;
-	flex-direction: column;
-	cursor: pointer;
-}
-
-.faq__questions details[open] svg {
-	transform: rotate(45deg);
-	transition: transform 0.2s ease;
-}
-
-.faq__questions summary {
-	display: flex;
-	align-items: center;
 	gap: 1rem;
-	list-style: none;
-	-webkit-user-select: none;
-	user-select: none;
 }
 
-.faq__questions summary::-webkit-details-marker {
-	display: none;
-}
-
-.questions__wrapper {
-	display: grid;
-	grid-template-rows: 0fr;
-	transition: grid-template-rows 0.3s ease-out;
-	overflow: hidden;
-}
-
-.faq__questions details[open] .questions__wrapper {
-	grid-template-rows: 1fr;
-}
-
-.questions__content {
-	min-height: 0;
-	overflow: hidden;
-}
-
-.questions__content p {
-	cursor: text;
-	font-size: var(--tiny-font-size);
-	color: var(--black-color);
-	padding: 0 0 1rem 0;
-
-}
-
-.faq__questions summary p {
-	color: var(--black-color);
-	font-size: var(--tiny-font-size);
-	font-weight: 500;
-}
-
-.faq__questions summary svg {
-	color: var(--red-color);
-	width: 20px;
-	min-width: 20px;
-	transition: transform 0.2s ease;
-}
-
-.faq__questions hr {
+.disclosures hr {
 	border: none;
 	flex-shrink: 0;
 	background-color: var(--bright-gray-color);
@@ -363,6 +302,68 @@
 	width: calc(100% - 1rem);
 	align-self: center;
 }
+
+.disclosure {
+	position: relative;
+	display: flex;
+	align-items: flex-start;
+	height: 20px;
+	transition: all 0.2s ease;
+	gap: 1rem;
+	overflow: hidden;
+}
+
+.disclosure::after {
+	position: absolute;
+	color: var(--gray-color);
+	top: 40px;
+	left: 0;
+}
+
+.disclosure-1::after {
+	content: "Stačí vám obyčejné tričko, pohodlné tepláky nebo kraťasy a láhev s vodou.";
+}
+
+.disclosure-2::after {
+	content: "Do naší dětské přípravky přijímáme děti od 4 let.";
+}
+
+.disclosure-3::after {
+	content: "Určitě. Každý začíná od absolutních základů a tempo přizpůsobujeme aktuálním fyzickým možnostem.";
+}
+
+.disclosure:has(input[type="radio"]:checked) {
+	height: 80px;
+}
+
+.disclosure-3:has(input[type="radio"]:checked) {
+	height: 95px;
+}
+
+.disclosure input[type="radio"]:checked ~  svg {
+	transform: rotate(45deg);
+}
+
+.disclosure svg {
+	color: var(--red-color);
+	width: 20px;
+	min-width: 20px;
+	transition: transform 0.2s ease;
+}
+
+.disclosure input {
+	display: none;
+}
+
+.disclosure label {
+	cursor: pointer;
+	position: relative;
+	font-size: var(--tiny-font-size);
+	font-family: 'Funnel Display', sans-serif;
+	font-weight: 500;
+	color: var(--black-color);
+}
+
 
 #call-to-action {
 	display: flex;
@@ -493,22 +494,38 @@
 		gap: 4rem;
 	}
 
-	.faq__questions {
+	.disclosures {
 		width: 345px;
-		gap: 0.5rem;
+		gap: 1.5rem;
 	}
 
-	.faq__questions summary svg {
+	.disclosure {
+		height: 25px;
+	}
+
+	.disclosure::after {
+		top: 50px;
+		font-size: var(--small-font-size);
+	}
+
+	.disclosure:has(input[type="radio"]:checked) {
+		height: 100px;
+	}
+
+	.disclosure-1:has(input[type="radio"]:checked) {
+		height: 115px;
+	}
+
+	.disclosure-3:has(input[type="radio"]:checked) {
+		height: 120px;
+	}
+
+	.disclosure svg {
 		width: 25px;
 		min-width: 25px;
 	}
 
-	.faq__questions summary p {
-		font-size: var(--small-font-size);
-	}
-
-	.questions__content p {
-		margin-top: 0;
+	.disclosure label {
 		font-size: var(--small-font-size);
 	}
 

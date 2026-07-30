@@ -116,8 +116,8 @@ h1,
 .why-us__item,
 .benefits__item,
 .testimonial,
-.faq__questions details,
-.faq__questions hr,
+.disclosure,
+.disclosure hr,
 #call-to-action h2,
 #call-to-action a {
 	animation: fade-in linear both;
