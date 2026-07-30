@@ -2,7 +2,6 @@
 @import "./header.css";
 @import "./footer.css";
 @import "./animate.css";
-@import "./lenis.css";
 
 #hero {
 	display: flex;
