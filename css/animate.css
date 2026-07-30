@@ -37,9 +37,13 @@
 		transform: scale(3.6);
 	}
 
-	footer .web:hover:not(:active),
-	footer .documents:hover:not(:active),
-	footer .community:hover:not(:active) {
+	footer .web a:hover:not(:active),
+	footer .documents a:hover:not(:active),
+	footer .community a:hover:not(:active) {
+		color: var(--white-color);
+	}
+
+	footer .community a:hover:not(:active) svg {
 		color: var(--white-color);
 	}
 
@@ -112,8 +116,8 @@ h1,
 .why-us__item,
 .benefits__item,
 .testimonial,
-.faq__questions details,
-.faq__questions hr,
+.disclosure,
+.disclosure hr,
 #call-to-action h2,
 #call-to-action a {
 	animation: fade-in linear both;
