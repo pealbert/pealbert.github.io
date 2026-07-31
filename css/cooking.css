@@ -44,7 +44,7 @@ main a::after {
 	transition: all 0.2s ease;
 }
 
-@media (min-width: 1024px) {
+@media (width >= 1024px) {
 	main {
 		gap: 2rem;
 	}

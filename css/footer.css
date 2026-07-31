@@ -101,14 +101,14 @@ footer > p {
 	color: var(--bright-gray-color);
 }
 
-@media (min-width: 428px) {
+@media (width >= 428px) {
 	footer .contact {
 		grid-column: 1 2;
 		grid-row: 2;
 	}
 }
 
-@media (min-width: 1024px) {
+@media (width >= 1024px) {
 	footer > a {
 		font-size: 11cqw;
 	}
