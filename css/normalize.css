@@ -1,5 +1,6 @@
 * {
 	-webkit-tap-highlight-color: transparent;
+	box-sizing: border-box;
 }
 
 html {
@@ -15,6 +16,7 @@ html::-webkit-scrollbar {
 
 body {
 	margin: 0;
+	overflow-x: hidden;
 }
 
 main {
