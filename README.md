@@ -1,1 +1,1 @@
-# Akademie Taekwon-do SKUP Olomouc
+# :3
