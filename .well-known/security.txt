@@ -1,5 +1,0 @@
-Contact: mailto: akademie.tkd.cz@gmail.com
-Expires: 2027-12-31T23:59:59.000Z
-Preferred-Languages: cs, en
-Canonical: https://example.com/.well-known/security.txt
-Policy: https://example.com/legal/security-policy
